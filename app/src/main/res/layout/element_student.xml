@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    app:cardCornerRadius="5dp"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:id="@+id/element_student_layout"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/element_student_card"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:elevation="@null"
+            android:layout_marginStart="15dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="25dp">
+
+            <TextView
+                android:id="@+id/element_student_first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center"
+                android:text="A"
+                android:textSize="16sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            app:layout_constraintStart_toEndOf="@id/element_student_card"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/element_student_name"
+                android:layout_width="wrap_content"
+                android:text="Mrityunjay HackPlanet"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/element_student_email"
+                android:layout_width="wrap_content"
+                android:text="mniish287@gmail.com"
+                android:textColor="#999999"
+                android:textSize="11sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

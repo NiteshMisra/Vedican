@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        tools:context=".activity.Solutions">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/solution_layout"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <com.razerdp.widget.animatedpieview.AnimatedPieView
+                    android:id="@+id/pieChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="5dp"
+                    android:weightSum="7">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:text="Correct"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:drawablePadding="5dp"
+                        android:drawableStart="@drawable/ic_dot_green"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:text="Incorrect"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:drawableStart="@drawable/ic_dot_red"
+                        android:drawablePadding="5dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:text="Not Attempted"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:drawableStart="@drawable/ic_dot_blue"
+                        android:drawablePadding="5dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_margin="20dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Result Insight"
+                            android:textColor="#FF0000"
+                            android:padding="5dp"
+                            android:textSize="14sp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="wrap_content"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:background="#ACACAC"
+                            android:layout_height="0.5dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="5"
+                            android:padding="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="Rank"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="0dp"
+                                android:textStyle="bold"
+                                android:textSize="14sp"
+                                android:layout_weight="3"/>
+
+                            <TextView
+                                android:id="@+id/rank"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="1/2"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="0dp"
+                                android:textSize="14sp"
+                                android:layout_weight="2"/>
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:background="#D6D5D5"
+                            android:layout_height="0.5dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="5"
+                            android:padding="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="Total Marks"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="0dp"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:layout_weight="3"/>
+
+                            <TextView
+                                android:id="@+id/totalMarks"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="1/2"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="0dp"
+                                android:textSize="14sp"
+                                android:layout_weight="2"/>
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:background="#D6D5D5"
+                            android:layout_height="0.5dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="5"
+                            android:padding="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="Obtained Marks"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="0dp"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:layout_weight="3"/>
+
+                            <TextView
+                                android:id="@+id/obtainedMarks"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="1/2"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="0dp"
+                                android:textSize="14sp"
+                                android:layout_weight="2"/>
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:background="#D6D5D5"
+                            android:layout_height="0.5dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="5"
+                            android:padding="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="Total Questions"
+                                android:textSize="14sp"
+                                android:paddingStart="5dp"
+                                android:textStyle="bold"
+                                android:paddingEnd="0dp"
+                                android:layout_weight="3"/>
+
+                            <TextView
+                                android:id="@+id/totalQuestions"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="1/2"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="0dp"
+                                android:textSize="14sp"
+                                android:layout_weight="2"/>
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:background="#D6D5D5"
+                            android:layout_height="0.5dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="5"
+                            android:padding="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="Attempted Questions"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="0dp"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:layout_weight="3"/>
+
+                            <TextView
+                                android:id="@+id/attempted"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="1/2"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="0dp"
+                                android:textSize="14sp"
+                                android:layout_weight="2"/>
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:background="#D6D5D5"
+                            android:layout_height="0.5dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="5"
+                            android:padding="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="Correct Answers"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="0dp"
+                                android:textStyle="bold"
+                                android:textSize="14sp"
+                                android:layout_weight="3"/>
+
+                            <TextView
+                                android:id="@+id/correct"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="1/2"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="0dp"
+                                android:textSize="14sp"
+                                android:layout_weight="2"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:background="#D6D5D5"
+                            android:layout_height="0.5dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="5"
+                            android:padding="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="Incorrect Answers"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="0dp"
+                                android:textStyle="bold"
+                                android:textSize="14sp"
+                                android:layout_weight="3"/>
+
+                            <TextView
+                                android:id="@+id/incorrect"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="1/2"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="0dp"
+                                android:textSize="14sp"
+                                android:layout_weight="2"/>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <ProgressBar
+            android:id="@+id/solutionProgress"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</layout>
